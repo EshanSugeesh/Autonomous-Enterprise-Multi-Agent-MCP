@@ -1,0 +1,25 @@
+{
+  "mcp": {
+    "servers": {
+      "mcp-server-commands": {
+        "command": "npx",
+        "args": ["mcp-server-commands"]
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
+      },
+      "git": {
+        "command": "uvx",
+        "args": ["mcp-server-git", "--repository", "path/to/git/repo"]
+      },
+      "github": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-github"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+        }
+      }
+    }
+  }
+}
